@@ -1,0 +1,4 @@
+//TODO
+Add top5 league maatches dataset and scorers dataset 
+korzystac metryki ale trzeba wiedziec rzeczowo
+studium apelacyjne 

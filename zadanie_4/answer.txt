@@ -1,0 +1,5 @@
+Po wykananiu zauważyłem że przy zwiększeniu M,  błąd przybliżenia może maleć
+Ale to były dane dostosowane do testu i nie błąd nie jest najważniejszym aspektem a tylko to jak model ogarnia dane nie testowe(rzeczywiste), bo jak nie jest w stanie opracować nowe dane z poza testów, to błąd traci sens  
+ Odnosnie pliku jupyter nie zrobiłem bo ciągle mam błąd z request'em linku. 
+lss.py był zrobiony na komputerze kolegi, jupytera nie zdąrzyłam zrobić.
+Zresetuje biblioteki i spróbuje ponownie
