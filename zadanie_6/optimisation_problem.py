@@ -15,28 +15,31 @@ from scipy import optimize
 
 def income(x_1: float, x_2: float) -> float:
     """Income from production of flesh."""
-    ...
-
+    return 13 * x_1 + 25 * x_2
 
 def objective(decision_vars: Tuple[float, float]) -> float:
     """Objective function (i.e. adapted income to optimisation jargon)."""
     x_1, x_2 = decision_vars
     return -1 * income(x_1, x_2)
 
-
 def constr_flesh(decision_vars: Tuple[float, float]) -> float:
     """Constraint according to substrate: flesh."""
-    ...
-
+    x_1, x_2 = decision_vars
+    return 1000 - (0.5 * x_1 + 0.9 * x_2)
 
 def constr_filler(decision_vars: Tuple[float, float]) -> float:
     """Constraint according to substrate: filler."""
-    ...
+    x_1, x_2 = decision_vars
+    return 500 - 1/3 * x_1
 
 
 def constr_salt(decision_vars: Tuple[float, float]) -> float:
     """Constraint according to substrate: salt."""
-    ...
+    x_1, x_2 = decision_vars
+    return 250 - (1/6 * x_1 + 0.1 * x_2)
+
+
+
 
 
 def constr_x_1(decision_vars: Tuple[float, float]) -> float:
@@ -47,19 +50,24 @@ def constr_x_1(decision_vars: Tuple[float, float]) -> float:
 
 def constr_x_2(decision_vars: Tuple[float, float]) -> float:
     """Constraint according to x_1 decision variable."""
-    ...
-
+    _, x_2 = decision_vars
+    return x_2
 
 def optimise() -> Tuple[float, float]:
     """Main optimisation method."""
     x_1, x_2 = 0, 0
     x_opt = optimize.fmin_cobyla(
         func=objective,
-        x0=...,
-        cons=...,
+        x0=[x_1, x_2],
+        cons=[constr_x_1, constr_x_2, constr_salt, constr_filler, constr_flesh]
     )
     print(x_opt)
     return x_opt
+
+
+# ########## Visualisation functions ############
+# Do not analyse them - they're just to help you.
+# ###############################################
 
 
 # ########## Visualisation functions ############
@@ -145,3 +153,4 @@ if __name__ == "__main__":
         [-2000, 2000, -2000, 2000],
         [constr_flesh, constr_filler, constr_salt, constr_x_1, constr_x_2],
     )
+
