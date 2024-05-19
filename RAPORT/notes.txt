@@ -1,4 +1,8 @@
-//TODO
-Add top5 league maatches dataset and scorers dataset 
-korzystac metryki ale trzeba wiedziec rzeczowo
-studium apelacyjne 
+
+
+
+//src: kaggle, footystats
+https://footystats.org/download-stats-csv#
+https://www.kaggle.com/datasets/davidcariboo/player-scores/data
+https://www.kaggle.com/code/davidcoxon/football-transfer-market-eda-basic-modelling
+'https://www.eurosport.com/football/premier-league/2019-2020/standings.shtml'
