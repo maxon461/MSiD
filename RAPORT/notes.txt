@@ -1,8 +1,0 @@
-
-
-
-//src: kaggle, footystats
-https://footystats.org/download-stats-csv#
-https://www.kaggle.com/datasets/davidcariboo/player-scores/data
-https://www.kaggle.com/code/davidcoxon/football-transfer-market-eda-basic-modelling
-'https://www.eurosport.com/football/premier-league/2019-2020/standings.shtml'
